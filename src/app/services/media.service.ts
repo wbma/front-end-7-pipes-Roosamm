@@ -38,6 +38,18 @@ export class MediaService {
       });
   }
 
+  register(user) {
+    return this.http.post(this.apiUrl + '/users', user);
+  }
+
+  upload(formData) {
+    const settings = {
+      headers: new HttpHeaders().set('x-access-token',
+        localStorage.getItem('token')),
+    };
+    return this.http.get(this.apiUrl + '/media', settings);
+  }
+
   getUserData() {
     const settings = {
       headers: new HttpHeaders().set('x-access-token',

@@ -1,0 +1,11 @@
+<form>
+  <input type="file" name="file" (change)="setFile($event)">
+  <br>
+  <p>Title</p>
+  <input type="text" name="title">
+  <br>
+  <p>Description</p>
+  <textarea name="description"></textarea>
+  <br>
+  <button type="submit" (click)="startUpload()">Upload</button>
+</form>
