@@ -1,11 +1,12 @@
 <form (submit)="register()">
-  <input [(ngModel)]="user.username" placeholder="Username" name="userName">
+  <input name="username" [(ngModel)]="mediaService.username" placeholder="Username"/>
   <br>
-  <input [(ngModel)]="user.password" placeholder="Password" name="password">
+  <input name="password" [(ngModel)]="mediaService.password" placeholder="Password"/>
   <br>
-  <input [(ngModel)]="user.email" placeholder="Email" name="email">
+  <input name="email" [(ngModel)]="mediaService.email" placeholder="Email">
   <br>
-  <input [(ngModel)]="user.full_name" placeholder="FullName" name="full_name">
+  <input [(ngModel)]="mediaService.full_name" placeholder="FullName" name="full_name">
   <br>
-  <button type="submit">Register</button>
+  <button type="submit" (click)="mediaService.login()">Register</button>
 </form>
+

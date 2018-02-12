@@ -21,8 +21,7 @@ export class RegisterComponent implements OnInit {
   register() {
     console.log(this.user);
 
-    this.mediaService.register(this.user).
-      subscribe(response => {
+    this.mediaService.register(this.user).subscribe(response => {
         console.log(response);
         this.mediaService.username = this.user.username;
         this.mediaService.password = this.user.password;

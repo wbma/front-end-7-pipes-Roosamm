@@ -30,6 +30,7 @@ export class UploadComponent implements OnInit {
     formData.append('file', this.file);
     formData.append('title', this.media.title);
     formData.append('description', this.media.description);
+    console.log(formData);
 
     this.mediaService.upload(formData).subscribe(data => {
       console.log(data);
